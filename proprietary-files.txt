@@ -1,4 +1,6 @@
 bin/system_monitor
+bin/gsiff_daemon
+bin/time_daemon
 etc/firmware/dxhdcp2.b00
 etc/firmware/dxhdcp2.b01
 etc/firmware/dxhdcp2.b02
@@ -22,6 +24,12 @@ etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 lib/libsysmon.so
 lib/libsysmon_idd.so
 lib/libsysmon_jni.so
+lib/libquipc_os_api.so
+lib/libquipc_ulp_adapter.so
+lib/libgeofence.so
+lib/libulp2.so
+lib/libsensor1.so
+lib/libtime_genoff.so
 lib/sysmon/sysmon_batt_therm.so
 lib/sysmon/sysmon_bl_therm.so
 lib/sysmon/sysmon_charge_current_limit_level.so
