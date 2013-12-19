@@ -633,6 +633,12 @@ service thermald /system/bin/thermald -c /system/etc/thermald.conf
     user root
     disabled
 
+#start GNSS/Sensor interface daemon
+service gsiff_daemon /system/bin/gsiff_daemon
+    class late_start
+    user system
+    group gps qcom_oncrpc net_raw
+
 service system_monitor /system/bin/system_monitor
     socket sysmon stream 0660 root system
     class core
