@@ -67,7 +67,7 @@ PRODUCT_COPY_FILES := \\
 # Pick up overlay for features that depend on non-open-source files
 DEVICE_PACKAGE_OVERLAYS := vendor/$VENDOR/$DEVICE/overlay
 
-PRODUCT_PACKAGES += libtime_genoff
+#PRODUCT_PACKAGES += libtime_genoff
 
 \$(call inherit-product, vendor/$VENDOR/$DEVICE/$DEVICE-vendor-blobs.mk)
 EOF
@@ -110,7 +110,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifeq (\$(TARGET_DEVICE),v500)
+ifeq (\$(TARGET_DEVICE),fusion3-common)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libtime_genoff
