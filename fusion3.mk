@@ -47,8 +47,7 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/system/etc/gps.conf:system/etc/gps.conf \
-	$(COMMON_PATH)/rootdir/system/etc/sap.conf:system/etc/sap.conf
+    $(COMMON_PATH)/rootdir/system/etc/gps.conf:system/etc/gps.conf
 
 # WPA supplicant config
 PRODUCT_COPY_FILES += \
@@ -111,17 +110,17 @@ PRODUCT_PACKAGES += \
     tinymix
 
 #gps
-PRODUCT_PACKAGES += \
-    libloc_adapter \
-    libloc_eng \
-    libloc_api_v02 \
-    libloc_ds_api \
-    libloc_core \
-    libizat_core \
-    libgeofence \
-    libgps.utils \
-    gps.msm8960 \
-    flp.msm8960
+#PRODUCT_PACKAGES += \
+ #   libloc_adapter \
+ #   libloc_eng \
+ #   libloc_api_v02 \
+ #   libloc_ds_api \
+ #   libloc_core \
+ #   libizat_core \
+ #   libgeofence \
+ #   libgps.utils \
+ #   gps.msm8960 \
+ #   flp.msm8960
 
 # BT
 PRODUCT_PACKAGES += \
@@ -212,6 +211,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.bt.hci_transport=smd
+
+# Our /cache is big enough to dexopt /system apps to it.
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dexopt-data-only=0
 
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/fusion3-common/fusion3-common-vendor.mk)
