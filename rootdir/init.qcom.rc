@@ -22,20 +22,20 @@ on early-init
     symlink /data/tombstones /tombstones
 
 #start GNSS/Sensor interface daemon
-service gsiff_daemon /system/bin/gsiff_daemon
-    class late_start
-    user system
-    group gps qcom_oncrpc net_raw
+#service gsiff_daemon /system/bin/gsiff_daemon
+#    class late_start
+#    user system
+#    group gps qcom_oncrpc net_raw
 
-service mdm_helper /system/bin/mdm_helper
-    class main
-    onrestart setprop ro.service.mdm_helper_restarted "true"
-    disabled
+#Service mdm_helper /system/bin/mdm_helper
+#    class main
+#    onrestart setprop ro.service.mdm_helper_restarted "true"
+#    disabled
 
-service time_daemon /system/bin/time_daemon
-   class late_start
-   user root
-   group root
+#service time_daemon /system/bin/time_daemon
+#   class late_start
+#   user root
+#   group root
 
 on init
     mkdir /mnt/shell/emulated 0700 shell shell

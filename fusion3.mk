@@ -109,19 +109,6 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     tinymix
 
-#gps
-#PRODUCT_PACKAGES += \
- #   libloc_adapter \
- #   libloc_eng \
- #   libloc_api_v02 \
- #   libloc_ds_api \
- #   libloc_core \
- #   libizat_core \
- #   libgeofence \
- #   libgps.utils \
- #   gps.msm8960 \
- #   flp.msm8960
-
 # BT
 PRODUCT_PACKAGES += \
     hci_qcomm_init
