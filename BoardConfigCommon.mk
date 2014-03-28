@@ -13,10 +13,10 @@
 # limitations under the License.
 
 # inherit from Sony common
--include device/sony/common/BoardConfigCommon.mk
+include device/sony/common/BoardConfigCommon.mk
 
 # inherit from qcom-common
--include device/sony/qcom-common/BoardConfigCommon.mk
+include device/sony/qcom-common/BoardConfigCommon.mk
 
 TARGET_SPECIFIC_HEADER_PATH := device/sony/fusion3-common/include
 
@@ -180,3 +180,5 @@ BOARD_SEPOLICY_UNION += \
     thermald.te \
     ueventd.te \
     wpa_supplicant.te
+
+BOARD_HARDWARE_CLASS := device/sony/fusion3-common/cmhw
